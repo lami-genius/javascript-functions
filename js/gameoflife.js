@@ -8,7 +8,7 @@ return arr;
 }
 
 function same([x, y], [j, k]) {
-  if ((x == i) && (y == k))
+  if ((x == j) && (y == k))
     return true;
 
   return false;
