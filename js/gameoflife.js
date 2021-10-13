@@ -96,7 +96,16 @@ const calculateNext = (state) => {
   return result;
 };
 
-const iterate = (state, iterations) => {};
+const iterate = (state, iterations) => {
+  let gameStartStates = [state];
+  for (let i = 0; i < iterations; i++) {
+    gameStartStates.push(
+      calculateNext(gameStartStates[gameStartStates.length - 1])
+    );
+  }
+
+  return gameStartStates;
+};
 
 const main = (pattern, iterations) => {};
 
